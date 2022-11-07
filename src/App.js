@@ -34,8 +34,8 @@ class App extends React.Component {
   }
 
   handleChange(event) {
-    const includesLetters = (value, { root } = "") => {
-      return root ? includes(value, root) : false;
+    const includesLetters = (value, { root, meaning } = "") => {
+      return root ? includes(value, root + meaning) : false;
     };
 
     const filterWords = (value) => {
