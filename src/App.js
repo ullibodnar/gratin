@@ -1,69 +1,69 @@
-import "./styles.css";
-import { words } from "./words.js";
-import { map, includes, filter } from "ramda";
-import React from "react";
+import './styles.css'
+import { words } from './words.js'
+import { map, includes, filter } from 'ramda'
+import React from 'react'
 
 const WordBox = ({ word }) => {
-  const { root, meaning, origin, etymology, examples } = word;
+  const { root, meaning, origin, etymology, examples } = word
 
   return (
-    <div className="word-box">
+    <div className='word-box'>
       <h1>{root}</h1>
       <h2>Meaning: {meaning} </h2>
       <h2>Origin: {origin}</h2>
       <h2>Etymology: {etymology} </h2>
       <h2>Examples: {examples}</h2>
     </div>
-  );
-};
+  )
+}
 
 const SearchBox = ({ onChange }) => {
   return (
     <div>
-      <input type="search" placeholder="Search" onChange={onChange} />
+      <input type='search' placeholder='Search' onChange={onChange} />
     </div>
-  );
-};
+  )
+}
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "", filteredWords: words, words: words };
-
-    this.handleChange = this.handleChange.bind(this);
+  constructor (props) {
+    super(props)
+    this.state = { value: '', filteredWords: words, words: words }
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(event) {
-    const includesLetters = (value, { root, meaning } = "") => {
-      return root ? includes(value, root + meaning) : false;
-    };
+  handleChange (event) {
+    const includesLetters = (value, { root, meaning } = '') => {
+      return root ? includes(value, root + meaning) : false
+    }
 
-    const filterWords = (value) => {
-      return filter((word) => includesLetters(value, word), words);
-    };
+    const filterWords = value => {
+      return filter(word => includesLetters(value, word), words)
+    }
 
     this.setState({
       value: event.target.value,
       filteredWords: event.target.value
         ? filterWords(event.target.value)
         : words
-    });
-    console.log("State: ", this.state);
+    })
+
+    console.log('State: ', this.state)
   }
 
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <SearchBox onChange={this.handleChange} />
         {map(
-          (w) => (
+          w => (
             <WordBox word={w} key={w.root + w.meaning + w.origin} />
           ),
           this.state.filteredWords
         )}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
