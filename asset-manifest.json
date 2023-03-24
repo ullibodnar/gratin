@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/gratin/static/css/main.1e131add.chunk.css",
-    "main.js": "/gratin/static/js/main.341a5b1d.chunk.js",
-    "main.js.map": "/gratin/static/js/main.341a5b1d.chunk.js.map",
-    "runtime-main.js": "/gratin/static/js/runtime-main.5ecf5570.js",
-    "runtime-main.js.map": "/gratin/static/js/runtime-main.5ecf5570.js.map",
-    "static/js/2.cb695ffa.chunk.js": "/gratin/static/js/2.cb695ffa.chunk.js",
-    "static/js/2.cb695ffa.chunk.js.map": "/gratin/static/js/2.cb695ffa.chunk.js.map",
+    "main.js": "/gratin/static/js/main.4103617c.chunk.js",
+    "main.js.map": "/gratin/static/js/main.4103617c.chunk.js.map",
+    "runtime-main.js": "/gratin/static/js/runtime-main.ee972f6b.js",
+    "runtime-main.js.map": "/gratin/static/js/runtime-main.ee972f6b.js.map",
+    "static/js/2.4e634a09.chunk.js": "/gratin/static/js/2.4e634a09.chunk.js",
+    "static/js/2.4e634a09.chunk.js.map": "/gratin/static/js/2.4e634a09.chunk.js.map",
     "index.html": "/gratin/index.html",
     "static/css/main.1e131add.chunk.css.map": "/gratin/static/css/main.1e131add.chunk.css.map",
-    "static/js/2.cb695ffa.chunk.js.LICENSE.txt": "/gratin/static/js/2.cb695ffa.chunk.js.LICENSE.txt"
+    "static/js/2.4e634a09.chunk.js.LICENSE.txt": "/gratin/static/js/2.4e634a09.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ecf5570.js",
-    "static/js/2.cb695ffa.chunk.js",
+    "static/js/runtime-main.ee972f6b.js",
+    "static/js/2.4e634a09.chunk.js",
     "static/css/main.1e131add.chunk.css",
-    "static/js/main.341a5b1d.chunk.js"
+    "static/js/main.4103617c.chunk.js"
   ]
 }
